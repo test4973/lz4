@@ -5,9 +5,13 @@ matrix:
     # Container-based 12.04 LTS Server Edition 64 bit (doesn't support 32-bit includes)
     - os: linux
       sudo: false
+      env: Ubu=12.04cont Cmd='make -C tests test-lz4' COMPILER=cc
+
+    - os: linux
+      sudo: false
       env: Ubu=12.04cont Cmd="make gpptest && make clean examples && make clean cmake && make clean travis-install && make clean clangtest" COMPILER=cc
 
-
+    # tag-specific test
     - if: tag =~ ^v1
       os: linux
       sudo: false
