@@ -15,7 +15,7 @@ matrix:
     - if: tag =~ ^v[0-9]\.[0-9]
       os: linux
       sudo: false
-      env: Ubu=12.04cont Cmd="echo TAG detected !" COMPILER=cc
+      env: Ubu=12.04cont TAG=tag Cmd="echo tag is : $TAG " COMPILER=cc
 
 
 script:
