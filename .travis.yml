@@ -12,7 +12,7 @@ matrix:
       env: Ubu=12.04cont Cmd="make gpptest && make clean examples && make clean cmake && make clean travis-install && make clean clangtest" COMPILER=cc
 
     # tag-specific test
-    - if: tag =~ ^v1
+    - if: tag =~ ^v[0-9]\.[0-9]
       os: linux
       sudo: false
       env: Ubu=12.04cont Cmd="echo TAG detected !" COMPILER=cc
